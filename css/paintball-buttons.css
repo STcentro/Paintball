@@ -1,0 +1,195 @@
+/* 
+* Paintball Tático Londrina - Estilos de Botões Marcador de Paintball
+* Desenvolvido para versão mobile e desktop
+*/
+
+/* Botão estilo marcador de paintball */
+.btn-paintball {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px 12px 50px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-family: var(--heading-font);
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin: 10px 5px;
+    border: 2px solid var(--dark-color);
+}
+
+/* Elemento que simula o cano do marcador */
+.btn-paintball::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 12px;
+    background-color: var(--dark-color);
+    border-radius: 6px;
+    z-index: 2;
+}
+
+/* Elemento que simula o gatilho do marcador */
+.btn-paintball::after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    bottom: 5px;
+    width: 10px;
+    height: 15px;
+    background-color: var(--dark-color);
+    border-radius: 2px;
+    z-index: 1;
+}
+
+.btn-paintball:hover {
+    transform: translateY(-3px) rotate(1deg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.btn-paintball:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Variações de cores */
+.btn-paintball-primary {
+    background-color: var(--primary-color);
+}
+
+.btn-paintball-secondary {
+    background-color: var(--secondary-color);
+}
+
+.btn-paintball-whatsapp {
+    background-color: #25d366;
+}
+
+.btn-paintball-instagram {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.btn-paintball-facebook {
+    background-color: #3b5998;
+}
+
+/* Ícones dentro dos botões */
+.btn-paintball i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Botão flutuante de WhatsApp estilo marcador */
+.whatsapp-paintball-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    transition: all 0.3s ease;
+    border: 3px solid var(--dark-color);
+}
+
+.whatsapp-paintball-float::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 8px;
+    background-color: var(--dark-color);
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.whatsapp-paintball-float:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+    .btn-paintball {
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px 30px 15px 55px;
+        font-size: 1.1rem;
+    }
+    
+    .btn-paintball::before {
+        width: 45px;
+        height: 14px;
+    }
+    
+    .btn-paintball::after {
+        left: 25px;
+        height: 18px;
+    }
+    
+    .whatsapp-paintball-float {
+        width: 80px;
+        height: 80px;
+        font-size: 35px;
+    }
+    
+    .whatsapp-paintball-float::before {
+        width: 30px;
+        height: 10px;
+        left: -20px;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    .btn-paintball {
+        padding: 14px 20px 14px 50px;
+        font-size: 1rem;
+    }
+    
+    .btn-paintball i {
+        margin-right: 8px;
+    }
+}
+
+/* Animação de tiro para os botões */
+@keyframes shoot {
+    0% {
+        transform: translateX(0) scale(1);
+    }
+    10% {
+        transform: translateX(-5px) scale(0.98);
+    }
+    30% {
+        transform: translateX(3px) scale(1.02);
+    }
+    100% {
+        transform: translateX(0) scale(1);
+    }
+}
+
+.btn-paintball:active::before {
+    animation: shoot 0.3s ease-in-out;
+}
