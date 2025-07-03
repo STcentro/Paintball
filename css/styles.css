@@ -325,7 +325,7 @@ img {
     position: absolute;
     width: 30px;
     height: 2px;
-    background-color: var(--dark-color);
+    background-color:white;
     transition: all 0.3s ease;
 }
 
