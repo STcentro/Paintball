@@ -1,0 +1,194 @@
+/* Ajustes adicionais para mobile */
+@media (max-width: 768px) {
+    /* Ajustes gerais */
+    .container {
+        padding: 0 20px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Header mobile */
+    .header {
+        padding: 10px 0;
+    }
+    
+    .logo img {
+        max-width: 120px;
+    }
+    
+    .cta-header {
+        display: none; /* Esconde o botão do header em mobile */
+    }
+    
+    /* Menu mobile */
+    .nav-list {
+        padding: 20px;
+    }
+    
+    .nav-list li {
+        margin: 15px 0;
+    }
+    
+    /* Hero section */
+    .hero-content {
+        padding: 30px 20px;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-buttons .btn-paintball {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    /* Pacotes */
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .package-card {
+        margin-bottom: 20px;
+    }
+    
+    /* Galeria */
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    
+    .social-links-gallery {
+        flex-direction: column;
+    }
+    
+    .social-links-gallery .btn-paintball {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    /* Features */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-card {
+        margin-bottom: 20px;
+    }
+    
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .event-item {
+        margin-bottom: 20px;
+    }
+    
+    /* Localização */
+    .location-container {
+        flex-direction: column;
+    }
+    
+    .map-container {
+        margin-bottom: 20px;
+    }
+    
+    .location-buttons {
+        flex-direction: column;
+    }
+    
+    .location-buttons .btn-paintball {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    /* Formulário */
+    .contact-form .form {
+        padding: 20px;
+    }
+    
+    .contact-buttons {
+        flex-direction: column;
+    }
+    
+    .contact-buttons .btn-paintball {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-info, .footer-links, .footer-contact {
+        margin-bottom: 20px;
+    }
+    
+    /* Botão flutuante de WhatsApp */
+    .whatsapp-paintball-float {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .package-card {
+        padding: 15px;
+    }
+    
+    .testimonial-card {
+        padding: 15px;
+    }
+}
+
+/* Melhorias de acessibilidade para toque em mobile */
+@media (max-width: 768px) {
+    /* Aumenta área de toque */
+    .btn-paintball {
+        min-height: 50px;
+        padding: 15px 30px 15px 55px;
+    }
+    
+    /* Aumenta espaçamento entre elementos clicáveis */
+    .nav-list li {
+        padding: 10px 0;
+    }
+    
+    /* Melhora visibilidade de elementos focados */
+    a:focus, button:focus, input:focus, select:focus, textarea:focus {
+        outline: 3px solid var(--primary-color);
+        outline-offset: 2px;
+    }
+    
+    /* Aumenta tamanho de fonte para melhor legibilidade */
+    body {
+        font-size: 16px;
+    }
+    
+    /* Aumenta contraste para melhor visibilidade */
+    .btn-paintball {
+        border: 2px solid var(--dark-color);
+    }
+}
